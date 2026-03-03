@@ -77,7 +77,7 @@ export class HttpTransportHandler {
   private generateOAuthUrl(client: import('google-auth-library').OAuth2Client): string {
     return client.generateAuthUrl({
       access_type: 'offline',
-      scope: ['https://www.googleapis.com/auth/calendar'],
+      scope: ['https://www.googleapis.com/auth/calendar.events', 'https://www.googleapis.com/auth/calendar.readonly'],
       prompt: 'consent'
     });
   }
